@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivendra A.S | Cyber Security Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0a0f1c;
+color:white;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#111827;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 50px;
+z-index:1000;
+box-shadow:0 0 10px #00e5ff;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#00e5ff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:17px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00e5ff;
+}
+
+section{
+min-height:100vh;
+padding:120px 10%;
+}
+
+.hero{
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:60px;
+color:#00e5ff;
+}
+
+.hero p{
+font-size:22px;
+margin-top:15px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:12px 25px;
+background:#00e5ff;
+color:black;
+font-weight:bold;
+text-decoration:none;
+border-radius:8px;
+}
+
+h2{
+text-align:center;
+font-size:40px;
+margin-bottom:30px;
+color:#00e5ff;
+}
+
+.about p{
+max-width:800px;
+margin:auto;
+text-align:center;
+font-size:18px;
+line-height:1.8;
+}
+
+.skills-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.skill{
+background:#111827;
+padding:25px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,229,255,.3);
+}
+
+.skill i{
+font-size:35px;
+color:#00e5ff;
+margin-bottom:10px;
+}
+
+.projects-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.project{
+background:#111827;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,229,255,.3);
+}
+
+.project h3{
+color:#00e5ff;
+margin-bottom:10px;
+}
+
+.contact form{
+max-width:600px;
+margin:auto;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+}
+
+.contact button{
+background:#00e5ff;
+border:none;
+padding:15px 25px;
+font-weight:bold;
+cursor:pointer;
+border-radius:8px;
+}
+
+.social{
+text-align:center;
+margin-top:30px;
+}
+
+.social a{
+font-size:30px;
+margin:0 15px;
+color:#00e5ff;
+}
+
+footer{
+background:#111827;
+padding:20px;
+text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Shivendra</div>
+
+<nav>
+<a href="#home"><i class="fas fa-home"></i> Home</a>
+<a href="#about"><i class="fas fa-user"></i> About</a>
+<a href="#skills"><i class="fas fa-code"></i> Skills</a>
+<a href="#projects"><i class="fas fa-folder"></i> Projects</a>
+<a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+</nav>
+
+</header>
+
+<section id="home" class="hero">
+
+<div>
+
+<h1>Hi, I'm Shivendra A.S</h1>
+
+<p>Cyber Security Student | Future IPS Officer</p>
+
+<a href="#contact" class="btn">Contact Me</a>
+
+</div>
+
+</section>
+
+<section id="about" class="about">
+
+<h2>About Me</h2>
+
+<p>
+I am Shivendra A.S, a B.Sc Cyber Security student at SRM Institute of Arts and Humanities.
+I am passionate about Cyber Security, Web Development and Technology.
+I continuously improve my skills and build projects to gain practical experience.
+</p>
+
+</section>
+
+<section id="skills">
+
+<h2>My Skills</h2>
+
+<div class="skills-container">
+
+<div class="skill">
+<i class="fab fa-html5"></i>
+<h3>HTML</h3>
+</div>
+
+<div class="skill">
+<i class="fab fa-css3-alt"></i>
+<h3>CSS</h3>
+</div>
+
+<div class="skill">
+<i class="fab fa-js"></i>
+<h3>JavaScript</h3>
+</div>
+
+<div class="skill">
+<i class="fab fa-python"></i>
+<h3>Python</h3>
+</div>
+
+<div class="skill">
+<i class="fas fa-shield-alt"></i>
+<h3>Cyber Security</h3>
+</div>
+
+<div class="skill">
+<i class="fab fa-github"></i>
+<h3>GitHub</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="projects-container">
+
+<div class="project">
+<h3>Portfolio Website</h3>
+<p>Developed a responsive cyber security portfolio website.</p>
+</div>
+
+<div class="project">
+<h3>Secure Login System</h3>
+<p>Created a login and registration system using PHP and MySQL.</p>
+</div>
+
+<div class="project">
+<h3>Student Management System</h3>
+<p>Built a simple web application to manage student records.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>Contact Me</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<div class="social">
+
+<a href="https://github.com/shivendra00746" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://instagram.com/shiv_endra7727" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Shivendra A.S | Cyber Security Portfolio</p>
+
+</footer>
+
+</body>
+</html>
