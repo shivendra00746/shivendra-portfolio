@@ -8,203 +8,159 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
-scroll-behavior:smooth;
-}
-
 body{
+margin:0;
+font-family:Segoe UI;
 background:#050816;
-color:white;
+color:#fff;
+scroll-behavior:smooth;
 }
 
 /* HEADER */
 header{
 position:fixed;
 top:0;
-left:0;
 width:100%;
-padding:20px 8%;
 display:flex;
 justify-content:space-between;
-align-items:center;
-background:rgba(5,8,22,0.95);
+padding:15px 8%;
+background:rgba(0,0,0,0.7);
 backdrop-filter:blur(10px);
 z-index:1000;
 }
 
 .logo{
-font-size:28px;
-font-weight:bold;
 color:#00e5ff;
+font-weight:bold;
+font-size:22px;
 }
 
 nav a{
 color:white;
+margin-left:20px;
 text-decoration:none;
-margin-left:25px;
-transition:.3s;
 }
 
-nav a:hover{
-color:#00e5ff;
-}
+nav a:hover{color:#00e5ff;}
 
 /* HERO */
-section{
-padding:100px 8%;
-}
-
 .hero{
-min-height:100vh;
+height:100vh;
 display:flex;
-align-items:center;
+flex-direction:column;
 justify-content:center;
+align-items:center;
 text-align:center;
 }
 
-.badge{
-display:inline-block;
-background:#00e5ff;
-color:black;
-padding:10px 18px;
-border-radius:30px;
-font-weight:bold;
-margin-bottom:20px;
+.hero h1{
+font-size:55px;
+color:#00e5ff;
+text-shadow:0 0 20px #00e5ff;
 }
 
-.hero h1{font-size:60px;color:#00e5ff;}
-.hero h2{margin-top:15px;font-size:28px;}
-
-.hero p{
-max-width:700px;
-margin:20px auto;
-line-height:1.8;
-}
-
-.terminal{
-background:#111827;
-padding:15px;
-border-left:4px solid #00e5ff;
-margin:25px auto;
-max-width:600px;
-font-family:monospace;
-text-align:left;
+.hero h2{
+font-size:22px;
+color:#ccc;
 }
 
 .btn{
-display:inline-block;
+margin-top:20px;
 padding:12px 25px;
 background:#00e5ff;
 color:black;
+border-radius:8px;
 text-decoration:none;
 font-weight:bold;
-border-radius:8px;
-margin-top:20px;
 }
 
-/* SECTION TITLE */
-h2.section-title{
+.resume-btn{
+margin-top:15px;
+padding:12px 25px;
+background:linear-gradient(90deg,#00e5ff,#0077ff);
+color:black;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 0 15px #00e5ff;
+}
+
+/* SECTIONS */
+section{
+padding:80px 10%;
+}
+
+.title{
 text-align:center;
-font-size:40px;
 color:#00e5ff;
+font-size:35px;
 margin-bottom:40px;
 }
 
 /* GRID */
-.skills-grid,
-.projects-grid{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
+/* CARD */
 .card{
-background:#111827;
-padding:25px;
+background:rgba(255,255,255,0.05);
+padding:20px;
 border-radius:12px;
-transition:.3s;
-box-shadow:0 0 15px rgba(0,229,255,.15);
+border:1px solid rgba(0,229,255,0.2);
+transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:scale(1.05);
+box-shadow:0 0 20px #00e5ff;
 }
 
-.card i{
-font-size:35px;
-color:#00e5ff;
-margin-bottom:15px;
+/* SKILL BAR */
+.bar{
+background:#111;
+height:10px;
+border-radius:10px;
+overflow:hidden;
+margin-top:5px;
+}
+
+.bar div{
+height:100%;
+background:#00e5ff;
 }
 
 /* CONTACT */
-.contact-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
 }
 
-.contact-card{
-background:#111827;
-padding:25px;
-border-radius:12px;
-}
-
-.contact-form input,
-.contact-form textarea{
-width:100%;
-padding:15px;
-margin:10px 0;
+input,textarea{
+padding:12px;
 border:none;
-border-radius:8px;
+border-radius:6px;
 }
 
-.contact-form button{
+button{
 background:#00e5ff;
+padding:12px;
 border:none;
-padding:12px 25px;
-border-radius:8px;
 font-weight:bold;
 cursor:pointer;
-}
-
-/* SOCIAL */
-.social a{
-font-size:30px;
-margin-right:15px;
-color:#00e5ff;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
-padding:30px;
-background:#111827;
-margin-top:50px;
-}
-
-/* BACK TO TOP */
-#topBtn{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#00e5ff;
-color:black;
-border:none;
-padding:10px 15px;
-border-radius:50%;
-cursor:pointer;
-display:none;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-.hero h1{font-size:40px;}
-.contact-grid{grid-template-columns:1fr;}
-nav{display:none;}
+padding:20px;
+background:#111;
+margin-top:40px;
 }
 </style>
 </head>
@@ -224,113 +180,80 @@ nav{display:none;}
 
 <!-- HERO -->
 <section id="home" class="hero">
-<div>
-<div class="badge">AVAILABLE FOR OPPORTUNITIES</div>
+<h1>Shivendra A.S</h1>
+<h2>Cyber Security Analyst | Ethical Hacker | IPS Aspirant</h2>
 
-<h1>Hi, I'm Shivendra A.S</h1>
-<h2>Cyber Security Enthusiast & Future IPS Officer</h2>
-
-<p>
-B.Sc Cyber Security student at SRM Institute of Arts and Humanities.
-Passionate about Cyber Security, Ethical Hacking and Web Development.
-</p>
-
-<div class="terminal">
-root@shivendra:~$ securing the digital world...
-</div>
-
-<a href="#contact" class="btn">Contact Me</a>
-</div>
+<a class="btn" href="#contact">Hire Me</a>
+<a class="resume-btn" href="resume.pdf" download>📄 Download Resume</a>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-<h2 class="section-title">About Me</h2>
-
+<h1 class="title">About Me</h1>
 <div class="card">
-<pre style="color:#00e5ff;">
-const developer = {
-  name: "Shivendra A.S",
-  role: "Cyber Security Student",
-  focus: ["Cyber Security","Ethical Hacking","Web Dev"],
-  passion: "Building Secure Systems"
-};
-</pre>
+<p>
+Cyber Security student passionate about ethical hacking, penetration testing,
+network security and secure system design. Future IPS aspirant.
+</p>
 </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-<h2 class="section-title">Tech Arsenal</h2>
+<h1 class="title">Skills</h1>
 
-<div class="skills-grid">
-<div class="card"><i class="fab fa-html5"></i><h3>HTML5</h3></div>
-<div class="card"><i class="fab fa-css3-alt"></i><h3>CSS3</h3></div>
-<div class="card"><i class="fab fa-js"></i><h3>JavaScript</h3></div>
-<div class="card"><i class="fab fa-python"></i><h3>Python</h3></div>
-<div class="card"><i class="fab fa-github"></i><h3>GitHub</h3></div>
-<div class="card"><i class="fas fa-shield-alt"></i><h3>Cyber Security</h3></div>
+<div class="grid">
+
+<div class="card">Cyber Security<div class="bar"><div style="width:90%"></div></div></div>
+<div class="card">Python<div class="bar"><div style="width:80%"></div></div></div>
+<div class="card">Networking<div class="bar"><div style="width:75%"></div></div></div>
+<div class="card">Web Dev<div class="bar"><div style="width:85%"></div></div></div>
+
 </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-<h2 class="section-title">Projects</h2>
+<h1 class="title">Projects</h1>
 
-<div class="projects-grid">
-<div class="card"><h3>Portfolio Website</h3><p>Personal portfolio design.</p></div>
-<div class="card"><h3>Secure Login System</h3><p>PHP & MySQL authentication.</p></div>
-<div class="card"><h3>Student System</h3><p>Record management tool.</p></div>
-<div class="card"><h3>Password Generator</h3><p>Strong password tool.</p></div>
+<div class="grid">
+
+<div class="card">
+<h3>Secure Login System</h3>
+<p>Authentication system with secure design.</p>
+</div>
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>Cyber security themed personal website.</p>
+</div>
+
+<div class="card">
+<h3>Password Generator</h3>
+<p>Strong password creation tool.</p>
+</div>
+
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<h2 class="section-title">Contact</h2>
+<h1 class="title">Contact Me</h1>
 
-<div class="contact-grid">
+<form action="https://formspree.io/f/xdavwrpe" method="POST">
 
-<div class="contact-form">
-<form action="mailto:shivendr898@gmail.com" method="post" enctype="text/plain">
-
-<input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" rows="6" placeholder="Your Message"></textarea>
+
+<textarea name="message" placeholder="Your Message" required></textarea>
 
 <button type="submit">Send Message</button>
+
 </form>
-</div>
-
-<div class="contact-card">
-<h3>Contact Info</h3>
-<p>Email: Shivendr898@gmail.com</p>
-<p>Phone: +91 6379081393</p>
-<p>Location: Chennai, India</p>
-
-<h3>Connect</h3>
-<div class="social">
-<a href="https://github.com/shivendra00746" target="_blank"><i class="fab fa-github"></i></a>
-<a href="https://instagram.com/shiv_endra7727" target="_blank"><i class="fab fa-instagram"></i></a>
-</div>
-</div>
-
-</div>
 </section>
 
 <footer>
 © 2026 Shivendra A.S | Cyber Security Portfolio
 </footer>
-
-<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
-<script>
-// back to top button
-window.onscroll = function(){
-document.getElementById("topBtn").style.display =
-window.scrollY > 300 ? "block" : "none";
-};
-</script>
 
 </body>
 </html>
